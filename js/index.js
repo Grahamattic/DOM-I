@@ -54,18 +54,24 @@ const siteContent = {
 
 // Navigation
 
-    // Update main nav bar
-    let navMenu = document.querySelectorAll("a");
-    navMenu[0].textContent = siteContent["nav"]["nav-item-1"];
-    navMenu[1].textContent = siteContent["nav"]["nav-item-2"];
-    navMenu[2].textContent = siteContent["nav"]["nav-item-3"];
-    navMenu[3].textContent = siteContent["nav"]["nav-item-4"];
-    navMenu[4].textContent = siteContent["nav"]["nav-item-5"];
-    navMenu[5].textContent = siteContent["nav"]["nav-item-6"];
+    // Grab all of the anchor tags in the header nav bar
+    let headerNav = document.querySelectorAll("a");
+
+    // Update header nav bar
+    headerNav[0].textContent = siteContent["nav"]["nav-item-1"];
+    headerNav[1].textContent = siteContent["nav"]["nav-item-2"];
+    headerNav[2].textContent = siteContent["nav"]["nav-item-3"];
+    headerNav[3].textContent = siteContent["nav"]["nav-item-4"];
+    headerNav[4].textContent = siteContent["nav"]["nav-item-5"];
+    headerNav[5].textContent = siteContent["nav"]["nav-item-6"];
+
+    // Change the color of the navigation text to green
+    headerNav.forEach(element => {element.style.color="green"});
 
 // Update the h1 heading
-const h1 = document.querySelector("h1");
-h1.textContent = "DOM Is Awesome";
+
+    const h1 = document.querySelector("h1");
+    h1.textContent = "DOM Is Awesome";
 
 // Update the button text
 const button = document.querySelector("button");
