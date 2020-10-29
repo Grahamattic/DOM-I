@@ -39,41 +39,66 @@ const siteContent = {
 
 // Images
 
-    // Example: Update the img src for the logo
+    // Example: Update the img src for the logo.
     let logo = document.getElementById("logo-img");
     logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-    // Update the img src for the cta image
+    // Update the img src for the cta image.
     let ctaImg = document.getElementById("cta-img");
     ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-    // Update the img src for the middle image
+    // Update the img src for the middle image.
     let middleImg = document.getElementById("middle-img");
     middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// Navigation
+// Header Navigation
 
-    // Grab all of the anchor tags in the header nav bar
+    // Grab all of the anchor tags in the header nav bar.
     let headerNav = document.querySelectorAll("a");
 
-    // Update header nav bar
-    headerNav[0].textContent = siteContent["nav"]["nav-item-1"];
-    headerNav[1].textContent = siteContent["nav"]["nav-item-2"];
-    headerNav[2].textContent = siteContent["nav"]["nav-item-3"];
-    headerNav[3].textContent = siteContent["nav"]["nav-item-4"];
-    headerNav[4].textContent = siteContent["nav"]["nav-item-5"];
-    headerNav[5].textContent = siteContent["nav"]["nav-item-6"];
+        // Update header nav bar.
+        headerNav[0].textContent = siteContent["nav"]["nav-item-1"];
+        headerNav[1].textContent = siteContent["nav"]["nav-item-2"];
+        headerNav[2].textContent = siteContent["nav"]["nav-item-3"];
+        headerNav[3].textContent = siteContent["nav"]["nav-item-4"];
+        headerNav[4].textContent = siteContent["nav"]["nav-item-5"];
+        headerNav[5].textContent = siteContent["nav"]["nav-item-6"];
 
-    // Change the color of the navigation text to green
-    headerNav.forEach(element => {element.style.color="green"});
+    // Add two new header nav links.
 
-// Update the h1 heading
+        // Prepend one link to the beginning of the nav list.
+        // Grab the parent element.
+        let parentElement = document.querySelector('nav');
+
+            // Create a new link called "Home"
+            let home = document.createElement('a');
+            home.textContent = "Home";
+
+            // Prepend the Home link to the beginning of the nav list.
+            parentElement.prepend(home);
+
+        // Append one link to the end of the nav list.
+
+            // Create a new link called "blog".
+            let blog = document.createElement('a');
+            blog.textContent = "Blog";
+
+            // Append the Blog link to the end of the nav list.
+            parentElement.appendChild(blog);
+
+    // Grab all of the anchor tags in the updated header nav bar.
+    let newHeaderNav = document.querySelectorAll("a");
+
+        // Change the color of the updated header nav links to green.
+        newHeaderNav.forEach(element=>{element.style.color="green"});
+
+// Update the h1 heading.
 
     const h1 = document.querySelector("h1");
     h1.textContent = "DOM Is Awesome";
 
-// Update the button text
+// Update the button text.
 const button = document.querySelector("button");
 button.textContent = "Get Started";
 
@@ -81,75 +106,75 @@ button.textContent = "Get Started";
 
     // Top Content Section
 
-        // Grab the .top-content h4 tags
+        // Grab the .top-content h4 tags.
         let mainTopTextH4 = document.body.querySelectorAll(".main-content .top-content .text-content h4");
 
-            // Update the first .top-content h4 heading
+            // Update the first .top-content h4 heading.
             mainTopTextH4[0].textContent = siteContent['main-content']["features-h4"];
 
-            // Update the second .top-content h4 heading
-            mainTopTextH4[1].textContent = siteContent['main-content']["about-h4"]
+            // Update the second .top-content h4 heading.
+            mainTopTextH4[1].textContent = siteContent['main-content']["about-h4"];
 
-        // Grab the .top-content p tags
+        // Grab the .top-content p tags.
         let mainTopTextP = document.body.querySelectorAll(".main-content .top-content .text-content p");
 
-            // Update the first .top-content paragraph
+            // Update the first .top-content paragraph.
             mainTopTextP[0].textContent = siteContent['main-content']["features-content"];
 
-            // Update the second .top-content paragraph
+            // Update the second .top-content paragraph.
             mainTopTextP[1].textContent = siteContent['main-content']['about-content'];
 
     // Bottom Content Section
 
-        // Grab the .bottom-content h4 tags
+        // Grab the .bottom-content h4 tags.
         let mainBottomTextH4 = document.body.querySelectorAll(".main-content .bottom-content .text-content h4");
 
-            // Update the first .bottom-content h4 heading
+            // Update the first .bottom-content h4 heading.
             mainBottomTextH4[0].textContent = siteContent['main-content']["services-h4"];
 
-            // Update the second .bottom-content h4 heading
-            mainBottomTextH4[1].textContent = siteContent['main-content']["product-h4"]
+            // Update the second .bottom-content h4 heading.
+            mainBottomTextH4[1].textContent = siteContent['main-content']["product-h4"];
 
-            // Update the third .bottom-content h4 heading
-            mainBottomTextH4[2].textContent = siteContent['main-content']["vision-h4"]
+            // Update the third .bottom-content h4 heading.
+            mainBottomTextH4[2].textContent = siteContent['main-content']["vision-h4"];
 
-        // Grab the .bottom-content p tags
+        // Grab the .bottom-content p tags.
         let mainBottomTextP = document.body.querySelectorAll(".main-content .bottom-content .text-content p");
 
-            // Update the first .bottom-content paragraph
+            // Update the first .bottom-content paragraph.
             mainBottomTextP[0].textContent = siteContent['main-content']["services-content"];
 
-            // Update the second .bottom-content paragraph
+            // Update the second .bottom-content paragraph.
             mainBottomTextP[1].textContent = siteContent['main-content']['product-content'];    
 
-            // Update the third .bottom-content paragraph
+            // Update the third .bottom-content paragraph.
                 mainBottomTextP[2].textContent = siteContent['main-content']['vision-content'];    
 
     // Contact Section
 
-        // Grab the contact h4 heading
+        // Grab the contact h4 heading.
         let contactH4 = document.body.querySelector(".contact h4");
 
-            // Update the .contact h4 heading
+            // Update the .contact h4 heading.
             contactH4.textContent = siteContent["contact"]["contact-h4"];
 
-        // Grab the .contact paragraph
+        // Grab the .contact paragraph.
         let contactP = document.body.querySelectorAll(".contact p");
 
-            // Update the .contact address
+            // Update the .contact address.
             contactP[0].textContent = siteContent['contact']["address"];
 
-            // Update the .contact phone number
+            // Update the .contact phone number.
             contactP[1].textContent = siteContent['contact']["phone"];
 
-            // Update the .contact email
+            // Update the .contact email.
             contactP[2].textContent = siteContent['contact']["email"];
 
     // Footer
 
-        // Grab the footer paragraph
+        // Grab the footer paragraph.
         let footer = document.body.querySelector("footer p");
 
-            // Update the footer paragrahp copyright
-            footer.textContent = siteContent["footer"]["copyright"]
+            // Update the footer paragrahp copyright.
+            footer.textContent = siteContent["footer"]["copyright"];
         
