@@ -44,12 +44,14 @@ const siteContent = {
     logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
-    // Update the img src for the cta image.
+    // Grab the cta image.
     let ctaImg = document.getElementById("cta-img");
+    // Update the img src for the cta image.
     ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-    // Update the img src for the middle image.
+    // Grab the middle image.
     let middleImg = document.getElementById("middle-img");
+    // Update the img src for the middle image.
     middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Header Navigation
@@ -95,12 +97,27 @@ const siteContent = {
 
 // Update the h1 heading.
 
+    // Style the h1 parent div.
+    ctaDiv = document.querySelector(".cta-text"); 
+    ctaDiv.style.margin = "auto";
+
+    // Grab the h1 heading tag.
     const h1 = document.querySelector("h1");
-    h1.textContent = "DOM Is Awesome";
+
+    // Create a break tag.
+    let br = document.createElement('br');
+    br.textContent = "<br>";
+
+    // Insert the h1 text from the JSON data with break tags.
+    h1.textContent = "DOM" + br + "Is" + br + "Awesome";
+
 
 // Update the button text.
-const button = document.querySelector("button");
-button.textContent = "Get Started";
+
+    // Grab the button.
+    const button = document.querySelector("button");
+    // Update the button text.
+    button.textContent = "Get Started";
 
 // Main Content Section
 
