@@ -124,3 +124,21 @@ const siteContent = {
             // Update the second .top-content paragraph.
             mainTopTextP[1].textContent = siteContent['main-content']['about-content'];
 
+    // Bottom Content Section
+        // Grab the .bottom-content h4 tags.
+        let mainBottomTextH4 = document.body.querySelectorAll(".main-content .bottom-content .text-content h4");
+            // Update the first .bottom-content h4 heading.
+            mainBottomTextH4[0].textContent = siteContent['main-content']["services-h4"];
+            // Update the second .bottom-content h4 heading.
+            mainBottomTextH4[1].textContent = siteContent['main-content']["product-h4"];
+            // Update the third .bottom-content h4 heading.
+            mainBottomTextH4[2].textContent = siteContent['main-content']["vision-h4"];
+        // Grab the .bottom-content p tags.
+        let mainBottomTextP = document.body.querySelectorAll(".main-content .bottom-content .text-content p");
+            // Update the first .bottom-content paragraph.
+            mainBottomTextP[0].textContent = siteContent['main-content']["services-content"];
+            // Update the second .bottom-content paragraph.
+            mainBottomTextP[1].textContent = siteContent['main-content']['product-content'];    
+            // Update the third .bottom-content paragraph.
+                mainBottomTextP[2].textContent = siteContent['main-content']['vision-content'];    
+
