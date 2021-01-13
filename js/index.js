@@ -87,3 +87,18 @@ const siteContent = {
                 // Change the color of the updated header nav links to green.
                 newHeaderNav.forEach(element=>{element.style.color="green"});
 
+// Update the h1 heading.
+
+    // Style the h1 parent div.
+    ctaDiv = document.querySelector(".cta-text"); 
+    ctaDiv.style.margin = "auto";
+
+    // Grab the h1 heading tag.
+    const h1 = document.querySelector("h1");
+    // Enter h1 heading with break tags.
+    document.querySelector("h1").innerHTML += "DOM";
+    document.querySelector("h1").innerHTML += "<br>";
+    document.querySelector("h1").innerHTML += "IS";
+    document.querySelector("h1").innerHTML += "<br>";
+    document.querySelector("h1").innerHTML += "AWESOME";
+
