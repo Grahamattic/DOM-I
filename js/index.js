@@ -108,3 +108,19 @@ const siteContent = {
     // Update the button text.
     button.textContent = "Get Started";
 
+// Main Content Section
+
+    // Top Content Section
+        // Grab the .top-content h4 tags.
+        let mainTopTextH4 = document.body.querySelectorAll(".main-content .top-content .text-content h4");
+            // Update the first .top-content h4 heading.
+            mainTopTextH4[0].textContent = siteContent['main-content']["features-h4"];
+            // Update the second .top-content h4 heading.
+            mainTopTextH4[1].textContent = siteContent['main-content']["about-h4"];
+        // Grab the .top-content p tags.
+        let mainTopTextP = document.body.querySelectorAll(".main-content .top-content .text-content p");
+            // Update the first .top-content paragraph.
+            mainTopTextP[0].textContent = siteContent['main-content']["features-content"];
+            // Update the second .top-content paragraph.
+            mainTopTextP[1].textContent = siteContent['main-content']['about-content'];
+
