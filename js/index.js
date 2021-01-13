@@ -142,3 +142,17 @@ const siteContent = {
             // Update the third .bottom-content paragraph.
                 mainBottomTextP[2].textContent = siteContent['main-content']['vision-content'];    
 
+// Contact Section
+        // Grab the contact h4 heading.
+        let contactH4 = document.body.querySelector(".contact h4");
+            // Update the .contact h4 heading.
+            contactH4.textContent = siteContent["contact"]["contact-h4"];
+        // Grab the .contact paragraph.
+        let contactP = document.body.querySelectorAll(".contact p");
+            // Update the .contact address.
+            contactP[0].textContent = siteContent['contact']["address"];
+            // Update the .contact phone number.
+            contactP[1].textContent = siteContent['contact']["phone"];
+            // Update the .contact email.
+            contactP[2].textContent = siteContent['contact']["email"];
+
