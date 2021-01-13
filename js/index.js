@@ -102,3 +102,9 @@ const siteContent = {
     document.querySelector("h1").innerHTML += "<br>";
     document.querySelector("h1").innerHTML += "AWESOME";
 
+// Update the button text.
+    // Grab the button.
+    const button = document.querySelector("button");
+    // Update the button text.
+    button.textContent = "Get Started";
+
