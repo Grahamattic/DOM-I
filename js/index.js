@@ -50,3 +50,9 @@ const siteContent = {
     // Update the img src for the cta image.
     ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
+// Update the img src for the middle image.
+    // Grab the middle image.
+    let middleImg = document.getElementById("middle-img");
+    // Update the img src for the middle image.
+    middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
