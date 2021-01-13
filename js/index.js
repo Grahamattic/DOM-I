@@ -156,3 +156,8 @@ const siteContent = {
             // Update the .contact email.
             contactP[2].textContent = siteContent['contact']["email"];
 
+// Footer
+        // Grab the footer paragraph.
+        let footer = document.body.querySelector("footer p");
+            // Update the footer paragrahp copyright.
+            footer.textContent = siteContent["footer"]["copyright"];
